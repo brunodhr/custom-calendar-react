@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import dateFns from 'date-fns';
-
+import pt from 'date-fns/locale/pt'
 const Calendar = () => {
   const [state, setState] = useState({
     currentMonth: new Date(),
@@ -18,7 +18,9 @@ const Calendar = () => {
           </div>
         </div>
         <div className="col col-center">
-          <span>{dateFns.format(state.currentMonth, dateFormat)}</span>
+          <span>{dateFns.format(state.currentMonth, dateFormat, {
+              locale: pt
+            })}</span>
         </div>
         <div className="col col-end" onClick={nextMonth}>
           <div className="icon">chevron_right</div>
@@ -36,7 +38,9 @@ const Calendar = () => {
     for (let i = 0; i < 7; i++) {
       days.push(
         <div className="col col-center" key={i}>
-          {dateFns.format(dateFns.addDays(startDate, i), dateFormat)}
+          {dateFns.format(dateFns.addDays(startDate, i), dateFormat, {
+            locale: pt
+          })}
         </div>
       );
     }
