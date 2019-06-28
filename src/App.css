@@ -145,18 +145,17 @@ main {
 
 /* Tamanho das fontes que falam os dias da semana */
 .calendar .days {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 400;
-  color: var(--text-color-light);
-  font-size: 70%;
+  color: black;
+  font-size: 8px;
   padding: 0.75em 0;
-  border-bottom: 1px solid var(--border-color);
 }
 
 /* Style fixo da célula  */
 .calendar .body .cell {
   position: relative;
-  height: 5em;
+  height: 2em;
   border-right: 1px solid var(--border-color);
   overflow: hidden;
   cursor: pointer;
