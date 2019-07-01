@@ -30,7 +30,7 @@ const Calendar = () => {
   };
 
   const renderDays = () => {
-    const dateFormat = 'dddd';
+    const dateFormat = 'ddd';
     const days = [];
 
     let startDate = dateFns.startOfWeek(state.currentMonth);
